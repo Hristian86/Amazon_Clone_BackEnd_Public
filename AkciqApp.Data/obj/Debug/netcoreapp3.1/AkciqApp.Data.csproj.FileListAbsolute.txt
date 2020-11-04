@@ -1,0 +1,15 @@
+C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Data\bin\Debug\netcoreapp3.1\AkciqApp.Data.deps.json
+C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Data\bin\Debug\netcoreapp3.1\AkciqApp.Data.runtimeconfig.json
+C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Data\bin\Debug\netcoreapp3.1\AkciqApp.Data.runtimeconfig.dev.json
+C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Data\bin\Debug\netcoreapp3.1\AkciqApp.Data.dll
+C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Data\bin\Debug\netcoreapp3.1\AkciqApp.Data.pdb
+C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Data\bin\Debug\netcoreapp3.1\AkciqApp.Common.dll
+C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Data\bin\Debug\netcoreapp3.1\AkciqApp.Models.dll
+C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Data\bin\Debug\netcoreapp3.1\AkciqApp.Common.pdb
+C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Data\bin\Debug\netcoreapp3.1\AkciqApp.Models.pdb
+C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Data\obj\Debug\netcoreapp3.1\AkciqApp.Data.csprojAssemblyReference.cache
+C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Data\obj\Debug\netcoreapp3.1\AkciqApp.Data.AssemblyInfoInputs.cache
+C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Data\obj\Debug\netcoreapp3.1\AkciqApp.Data.AssemblyInfo.cs
+C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Data\obj\Debug\netcoreapp3.1\AkciqApp.Data.csproj.CopyComplete
+C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Data\obj\Debug\netcoreapp3.1\AkciqApp.Data.dll
+C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Data\obj\Debug\netcoreapp3.1\AkciqApp.Data.pdb

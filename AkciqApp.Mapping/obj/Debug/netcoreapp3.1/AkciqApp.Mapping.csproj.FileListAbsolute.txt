@@ -1,0 +1,24 @@
+C:\Users\Pencho\Desktop\Web_Appi_ForumBased\AkciqApp.Mapping\bin\Debug\netcoreapp3.1\AkciqApp.Mapping.deps.json
+C:\Users\Pencho\Desktop\Web_Appi_ForumBased\AkciqApp.Mapping\bin\Debug\netcoreapp3.1\AkciqApp.Mapping.dll
+C:\Users\Pencho\Desktop\Web_Appi_ForumBased\AkciqApp.Mapping\obj\Debug\netcoreapp3.1\AkciqApp.Mapping.AssemblyInfoInputs.cache
+C:\Users\Pencho\Desktop\Web_Appi_ForumBased\AkciqApp.Mapping\obj\Debug\netcoreapp3.1\AkciqApp.Mapping.AssemblyInfo.cs
+C:\Users\Pencho\Desktop\Web_Appi_ForumBased\AkciqApp.Mapping\bin\Debug\netcoreapp3.1\AkciqApp.Mapping.pdb
+C:\Users\Pencho\Desktop\Web_Appi_ForumBased\AkciqApp.Mapping\obj\Debug\netcoreapp3.1\AkciqApp.Mapping.csprojAssemblyReference.cache
+C:\Users\Pencho\Desktop\Web_Appi_ForumBased\AkciqApp.Mapping\obj\Debug\netcoreapp3.1\AkciqApp.Mapping.dll
+C:\Users\Pencho\Desktop\Web_Appi_ForumBased\AkciqApp.Mapping\obj\Debug\netcoreapp3.1\AkciqApp.Mapping.pdb
+C:\Users\Pencho\Desktop\Web_Appi_ForumBased – Копие (3) – Копие\AkciqApp.Mapping\bin\Debug\netcoreapp3.1\AkciqApp.Mapping.deps.json
+C:\Users\Pencho\Desktop\Web_Appi_ForumBased – Копие (3) – Копие\AkciqApp.Mapping\bin\Debug\netcoreapp3.1\AkciqApp.Mapping.dll
+C:\Users\Pencho\Desktop\Web_Appi_ForumBased – Копие (3) – Копие\AkciqApp.Mapping\bin\Debug\netcoreapp3.1\AkciqApp.Mapping.pdb
+C:\Users\Pencho\Desktop\Web_Appi_ForumBased – Копие (3) – Копие\AkciqApp.Mapping\obj\Debug\netcoreapp3.1\AkciqApp.Mapping.csprojAssemblyReference.cache
+C:\Users\Pencho\Desktop\Web_Appi_ForumBased – Копие (3) – Копие\AkciqApp.Mapping\obj\Debug\netcoreapp3.1\AkciqApp.Mapping.AssemblyInfoInputs.cache
+C:\Users\Pencho\Desktop\Web_Appi_ForumBased – Копие (3) – Копие\AkciqApp.Mapping\obj\Debug\netcoreapp3.1\AkciqApp.Mapping.AssemblyInfo.cs
+C:\Users\Pencho\Desktop\Web_Appi_ForumBased – Копие (3) – Копие\AkciqApp.Mapping\obj\Debug\netcoreapp3.1\AkciqApp.Mapping.dll
+C:\Users\Pencho\Desktop\Web_Appi_ForumBased – Копие (3) – Копие\AkciqApp.Mapping\obj\Debug\netcoreapp3.1\AkciqApp.Mapping.pdb
+C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Mapping\bin\Debug\netcoreapp3.1\AkciqApp.Mapping.deps.json
+C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Mapping\bin\Debug\netcoreapp3.1\AkciqApp.Mapping.dll
+C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Mapping\bin\Debug\netcoreapp3.1\AkciqApp.Mapping.pdb
+C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Mapping\obj\Debug\netcoreapp3.1\AkciqApp.Mapping.csprojAssemblyReference.cache
+C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Mapping\obj\Debug\netcoreapp3.1\AkciqApp.Mapping.AssemblyInfoInputs.cache
+C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Mapping\obj\Debug\netcoreapp3.1\AkciqApp.Mapping.AssemblyInfo.cs
+C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Mapping\obj\Debug\netcoreapp3.1\AkciqApp.Mapping.dll
+C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Mapping\obj\Debug\netcoreapp3.1\AkciqApp.Mapping.pdb
