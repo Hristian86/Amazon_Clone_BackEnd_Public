@@ -7,7 +7,7 @@ using AkciqApp.ViewModels.OutPutViewModels.Category;
 
 namespace AkciqApp.ViewModels.CategoryViewHolder
 {
-    public class CategoryVIewModel : IMapFrom<Category>, IMapFrom<Vote>,IMapFrom<Comment>, IMapFrom<Product>
+    public class CategoryVIewModel : IMapFrom<Category>, IMapFrom<Vote>,IMapFrom<Comment>, IMapFrom<Product>, IMapFrom<CategoryPerant>
     {
         public object GeoLocation { get; set; }
 
@@ -15,7 +15,7 @@ namespace AkciqApp.ViewModels.CategoryViewHolder
 
         public string Name { get; set; }
 
-        public string Genre { get; set; }
+        public string Type { get; set; }
 
         public string Title { get; set; }
 
@@ -24,6 +24,8 @@ namespace AkciqApp.ViewModels.CategoryViewHolder
         public string ImageURL { get; set; }
 
         public int ProductsCount { get; set; }
+
+        public int CategoryPerantId { get; set; }
 
         public IEnumerable<ProductsInCategoryViewModel> Products { get; set; }
     }

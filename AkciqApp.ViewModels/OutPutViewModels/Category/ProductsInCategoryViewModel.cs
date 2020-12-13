@@ -12,6 +12,8 @@
     {
         public int Id { get; set; }
 
+        public int CategoryId { get; set; }
+
         public DateTime CreatedOn { get; set; }
 
         public string Title { get; set; }

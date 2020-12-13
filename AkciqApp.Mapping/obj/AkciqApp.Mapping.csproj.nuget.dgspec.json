@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pencho\\Desktop\\My_Forum_System\\AkciqApp.Mapping\\AkciqApp.Mapping.csproj": {}
+    "G:\\FilesForGithub\\Amazon_Clone_BackEnd_Public\\AkciqApp.Mapping\\AkciqApp.Mapping.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pencho\\Desktop\\My_Forum_System\\AkciqApp.Mapping\\AkciqApp.Mapping.csproj": {
+    "G:\\FilesForGithub\\Amazon_Clone_BackEnd_Public\\AkciqApp.Mapping\\AkciqApp.Mapping.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pencho\\Desktop\\My_Forum_System\\AkciqApp.Mapping\\AkciqApp.Mapping.csproj",
+        "projectUniqueName": "G:\\FilesForGithub\\Amazon_Clone_BackEnd_Public\\AkciqApp.Mapping\\AkciqApp.Mapping.csproj",
         "projectName": "AkciqApp.Mapping",
-        "projectPath": "C:\\Users\\Pencho\\Desktop\\My_Forum_System\\AkciqApp.Mapping\\AkciqApp.Mapping.csproj",
+        "projectPath": "G:\\FilesForGithub\\Amazon_Clone_BackEnd_Public\\AkciqApp.Mapping\\AkciqApp.Mapping.csproj",
         "packagesPath": "C:\\Users\\Pencho\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pencho\\Desktop\\My_Forum_System\\AkciqApp.Mapping\\obj\\",
+        "outputPath": "G:\\FilesForGithub\\Amazon_Clone_BackEnd_Public\\AkciqApp.Mapping\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

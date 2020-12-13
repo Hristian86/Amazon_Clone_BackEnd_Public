@@ -1364,11 +1364,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pencho\\Desktop\\My_Forum_System\\AkciqApp.ViewModels\\AkciqApp.ViewModels.csproj",
+      "projectUniqueName": "G:\\FilesForGithub\\Amazon_Clone_BackEnd_Public\\AkciqApp.ViewModels\\AkciqApp.ViewModels.csproj",
       "projectName": "AkciqApp.ViewModels",
-      "projectPath": "C:\\Users\\Pencho\\Desktop\\My_Forum_System\\AkciqApp.ViewModels\\AkciqApp.ViewModels.csproj",
+      "projectPath": "G:\\FilesForGithub\\Amazon_Clone_BackEnd_Public\\AkciqApp.ViewModels\\AkciqApp.ViewModels.csproj",
       "packagesPath": "C:\\Users\\Pencho\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pencho\\Desktop\\My_Forum_System\\AkciqApp.ViewModels\\obj\\",
+      "outputPath": "G:\\FilesForGithub\\Amazon_Clone_BackEnd_Public\\AkciqApp.ViewModels\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -1389,11 +1389,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Pencho\\Desktop\\My_Forum_System\\AkciqApp.Mapping\\AkciqApp.Mapping.csproj": {
-              "projectPath": "C:\\Users\\Pencho\\Desktop\\My_Forum_System\\AkciqApp.Mapping\\AkciqApp.Mapping.csproj"
+            "G:\\FilesForGithub\\Amazon_Clone_BackEnd_Public\\AkciqApp.Mapping\\AkciqApp.Mapping.csproj": {
+              "projectPath": "G:\\FilesForGithub\\Amazon_Clone_BackEnd_Public\\AkciqApp.Mapping\\AkciqApp.Mapping.csproj"
             },
-            "C:\\Users\\Pencho\\Desktop\\My_Forum_System\\AkciqApp.Models\\AkciqApp.Models.csproj": {
-              "projectPath": "C:\\Users\\Pencho\\Desktop\\My_Forum_System\\AkciqApp.Models\\AkciqApp.Models.csproj"
+            "G:\\FilesForGithub\\Amazon_Clone_BackEnd_Public\\AkciqApp.Models\\AkciqApp.Models.csproj": {
+              "projectPath": "G:\\FilesForGithub\\Amazon_Clone_BackEnd_Public\\AkciqApp.Models\\AkciqApp.Models.csproj"
             }
           }
         }

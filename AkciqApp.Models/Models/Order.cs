@@ -21,6 +21,8 @@
 
         public string Description { get; set; }
 
+        public double TotalSum { get; set; }
+
         // and billig stuff ...
     }
 }

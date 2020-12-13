@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pencho\\Desktop\\My_Forum_System\\AkciqApp.Common\\AkciqApp.Common.csproj",
+      "projectUniqueName": "G:\\FilesForGithub\\Amazon_Clone_BackEnd_Public\\AkciqApp.Common\\AkciqApp.Common.csproj",
       "projectName": "AkciqApp.Common",
-      "projectPath": "C:\\Users\\Pencho\\Desktop\\My_Forum_System\\AkciqApp.Common\\AkciqApp.Common.csproj",
+      "projectPath": "G:\\FilesForGithub\\Amazon_Clone_BackEnd_Public\\AkciqApp.Common\\AkciqApp.Common.csproj",
       "packagesPath": "C:\\Users\\Pencho\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pencho\\Desktop\\My_Forum_System\\AkciqApp.Common\\obj\\",
+      "outputPath": "G:\\FilesForGithub\\Amazon_Clone_BackEnd_Public\\AkciqApp.Common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

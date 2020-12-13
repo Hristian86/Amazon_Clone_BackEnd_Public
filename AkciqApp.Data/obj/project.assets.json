@@ -5337,11 +5337,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pencho\\Desktop\\My_Forum_System\\AkciqApp.Data\\AkciqApp.Data.csproj",
+      "projectUniqueName": "G:\\FilesForGithub\\Amazon_Clone_BackEnd_Public\\AkciqApp.Data\\AkciqApp.Data.csproj",
       "projectName": "AkciqApp.Data",
-      "projectPath": "C:\\Users\\Pencho\\Desktop\\My_Forum_System\\AkciqApp.Data\\AkciqApp.Data.csproj",
+      "projectPath": "G:\\FilesForGithub\\Amazon_Clone_BackEnd_Public\\AkciqApp.Data\\AkciqApp.Data.csproj",
       "packagesPath": "C:\\Users\\Pencho\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pencho\\Desktop\\My_Forum_System\\AkciqApp.Data\\obj\\",
+      "outputPath": "G:\\FilesForGithub\\Amazon_Clone_BackEnd_Public\\AkciqApp.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -5362,11 +5362,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Pencho\\Desktop\\My_Forum_System\\AkciqApp.Common\\AkciqApp.Common.csproj": {
-              "projectPath": "C:\\Users\\Pencho\\Desktop\\My_Forum_System\\AkciqApp.Common\\AkciqApp.Common.csproj"
+            "G:\\FilesForGithub\\Amazon_Clone_BackEnd_Public\\AkciqApp.Common\\AkciqApp.Common.csproj": {
+              "projectPath": "G:\\FilesForGithub\\Amazon_Clone_BackEnd_Public\\AkciqApp.Common\\AkciqApp.Common.csproj"
             },
-            "C:\\Users\\Pencho\\Desktop\\My_Forum_System\\AkciqApp.Models\\AkciqApp.Models.csproj": {
-              "projectPath": "C:\\Users\\Pencho\\Desktop\\My_Forum_System\\AkciqApp.Models\\AkciqApp.Models.csproj"
+            "G:\\FilesForGithub\\Amazon_Clone_BackEnd_Public\\AkciqApp.Models\\AkciqApp.Models.csproj": {
+              "projectPath": "G:\\FilesForGithub\\Amazon_Clone_BackEnd_Public\\AkciqApp.Models\\AkciqApp.Models.csproj"
             }
           }
         }
