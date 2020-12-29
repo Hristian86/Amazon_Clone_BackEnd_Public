@@ -13,9 +13,9 @@
 
     public class ProductService : IProductService
     {
-        private readonly IRepository<Product> postRepository;
+        private readonly IDeletableEntityRepository<Product> postRepository;
 
-        public ProductService(IRepository<Product> postRepository)
+        public ProductService(IDeletableEntityRepository<Product> postRepository)
         {
             this.postRepository = postRepository;
         }
@@ -24,11 +24,12 @@
         {
             Product product = new Product()
             {
+                Quantity = model.Quantity,
                 CategoryId = model.CategoryId,
                 Title = model.Title,
                 Content = model.Content,
                 UserId = userId,
-                Description = model.Content,
+                Description = model.Description,
                 ImageUrl = model.ImageUrl,
                 Price = model.Price,
                 Rating = model.Rating,

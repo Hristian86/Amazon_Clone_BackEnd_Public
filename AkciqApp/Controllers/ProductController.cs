@@ -72,7 +72,7 @@
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create(ProductCreateInputModel model)
         {
-            if (!ModelState.IsValid)
+            if (!this.ModelState.IsValid)
             {
                 return this.BadRequest();
             }

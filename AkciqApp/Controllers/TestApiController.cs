@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Antiforgery;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-
-namespace AkciqApp.Controllers
+﻿namespace AkciqApp.Controllers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using Microsoft.AspNetCore.Antiforgery;
+    using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Http;
+    using Microsoft.AspNetCore.Mvc;
+
     [Route("api/[controller]")]
     [ApiController]
     public class TestApiController : ControllerBase
@@ -21,12 +21,11 @@ namespace AkciqApp.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         //[IgnoreAntiforgeryToken]
-        public async Task<ActionResult> AntiForgeryToken()
+        public ActionResult AntiForgeryToken()
         {
-            var cookies = this.HttpContext.Request;
-
-            var token = await this.antiforgery.IsRequestValidAsync(this.HttpContext);
+           var token = this.antiforgery.ValidateRequestAsync(this.HttpContext);
 
             return this.Ok("token valid");
         }

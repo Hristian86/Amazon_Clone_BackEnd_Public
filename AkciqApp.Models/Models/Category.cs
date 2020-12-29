@@ -17,7 +17,7 @@
         [MaxLength(100)]
         public string Name { get; set; }
 
-        public string Genre { get; set; }
+        public string Type { get; set; }
 
         public string Title { get; set; }
 
@@ -26,5 +26,9 @@
         public string ImageURL { get; set; }
 
         public virtual ICollection<Product> Products { get; set; }
+
+        public int CategoryPerantId { get; set; }
+
+        public virtual CategoryPerant CategoryPerant { get; set; }
     }
 }

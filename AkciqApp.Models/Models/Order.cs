@@ -17,12 +17,15 @@
 
         public virtual ApplicationUser User { get; set; }
 
-        public ICollection<OrderItem> OrderItems { get; set; }
+        public virtual ICollection<OrderItem> OrderItems { get; set; }
 
         public string Description { get; set; }
 
+        // and billig stuff ...
         public double TotalSum { get; set; }
 
-        // and billig stuff ...
+        public string IpAddress { get; set; }
+
+        public bool ConfirmedPurchase { get; set; }
     }
 }

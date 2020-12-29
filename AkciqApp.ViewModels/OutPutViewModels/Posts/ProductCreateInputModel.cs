@@ -8,6 +8,7 @@
 
     public class ProductCreateInputModel
     {
+
         public int Id { get; set; }
 
         [Required]

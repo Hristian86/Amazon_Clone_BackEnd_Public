@@ -7,7 +7,7 @@ namespace AkciqApp.Services.CartLogic
 {
     public interface ICartService
     {
-        public Task<string> PurchaseMethod(ApplicationUser user, CatrViewModel cartModel);
+        public Task<string> PurchaseMethod(ApplicationUser user, CatrViewModel cartModel, string ip);
 
         public bool PurchasePayment();
     }

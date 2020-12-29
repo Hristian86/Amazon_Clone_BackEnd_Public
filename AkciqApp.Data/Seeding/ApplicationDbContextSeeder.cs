@@ -27,6 +27,7 @@
                           {
                               new RolesSeeder(),
                               new SettingsSeeder(),
+                              new CategoryPerantSeeder(),
                               new CategorySeeder(),
                               new ProductsSeeder(),
                           };

@@ -1,6 +1,7 @@
 ﻿namespace AkciqApp.Common.Repositories
 {
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
 
@@ -18,5 +19,7 @@
         void Delete(TEntity entity);
 
         Task<int> SaveChangesAsync();
+
+        public void UpdateRange(IEnumerable<TEntity> elements);
     }
 }

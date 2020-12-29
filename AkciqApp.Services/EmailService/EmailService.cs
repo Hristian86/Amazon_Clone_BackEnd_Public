@@ -1,9 +1,9 @@
-﻿using MailKit.Security;
-using MimeKit;
-using MimeKit.Text;
-
-namespace AkciqApp.Services.EmailService
+﻿namespace AkciqApp.Services.EmailService
 {
+    using MailKit.Security;
+    using MimeKit;
+    using MimeKit.Text;
+
     public class EmailService : IEmailService
     {
 

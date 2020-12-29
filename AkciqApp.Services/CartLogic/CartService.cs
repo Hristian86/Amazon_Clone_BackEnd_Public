@@ -29,19 +29,14 @@
             this.productList = new List<Product>();
         }
 
-        public async Task<string> PurchaseMethod(ApplicationUser user, CatrViewModel cartModel)
+        public async Task<string> PurchaseMethod(ApplicationUser user, CatrViewModel cartModel, string ip)
         {
-            try
-            {
-                base.CheckTheProducts(cartModel, this.productRepository, this.productList);
-            }
-            catch (Exception ex)
-            {
-                return ex.Message;
-            }
+            int quantity = 1;
+
+            base.CheckTheProducts(cartModel, this.productRepository, this.productList, quantity);
 
             // Create an order.
-            var newOrder = await base.CreateOrder(user, this.orderRepository);
+            var newOrder = await base.CreateOrder(user, this.orderRepository, ip);
 
             decimal totalPrice = 0M;
 
@@ -49,7 +44,7 @@
             foreach (var prod in this.productList)
             {
                 // To Do Add quantity property.
-                totalPrice += await base.OrderMethod(prod, user, newOrder, this.productToBeModified);
+                totalPrice += await base.OrderMethod(prod, user, newOrder, this.productToBeModified, quantity);
             }
 
             // Save the updated order.
@@ -65,7 +60,7 @@
             await this.orderRepository.SaveChangesAsync();
 
             // Return the order id;
-            return $"id = {newOrder.Id} and total price {totalPrice}," + this.outOfStock;
+            return $"id={newOrder.Id}, total price {totalPrice}," + this.outOfStock;
         }
 
         // Payment logic...

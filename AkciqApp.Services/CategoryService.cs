@@ -11,10 +11,20 @@
     public class CategoryService : ICategoryService
     {
         private readonly IDeletableEntityRepository<Category> categoryRepository;
+        private readonly IDeletableEntityRepository<CategoryPerant> categoryPerantRepository;
 
-        public CategoryService(IDeletableEntityRepository<Category> categoryRepository)
+        public CategoryService(IDeletableEntityRepository<Category> categoryRepository,
+            IDeletableEntityRepository<CategoryPerant> categoryPerantRepository)
         {
             this.categoryRepository = categoryRepository;
+            this.categoryPerantRepository = categoryPerantRepository;
+        }
+
+        public IEnumerable<T> GetAllPerants<T>()
+        {
+            IQueryable<CategoryPerant> query = this.categoryPerantRepository.All()
+               .OrderBy(x => x.Name);
+            return query.To<T>().ToList();
         }
 
         public IEnumerable<T> GetAll<T>(int? count = null)

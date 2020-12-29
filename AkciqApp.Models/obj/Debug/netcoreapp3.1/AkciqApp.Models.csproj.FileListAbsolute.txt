@@ -82,3 +82,14 @@ C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Models\obj\Debug\netcoreapp3.1\
 C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Models\obj\Debug\netcoreapp3.1\AkciqApp.Models.csproj.CopyComplete
 C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Models\obj\Debug\netcoreapp3.1\AkciqApp.Models.dll
 C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Models\obj\Debug\netcoreapp3.1\AkciqApp.Models.pdb
+G:\FilesForGithub\amazion_clone_back_end\AkciqApp.Models\bin\Debug\netcoreapp3.1\AkciqApp.Models.deps.json
+G:\FilesForGithub\amazion_clone_back_end\AkciqApp.Models\bin\Debug\netcoreapp3.1\AkciqApp.Models.dll
+G:\FilesForGithub\amazion_clone_back_end\AkciqApp.Models\bin\Debug\netcoreapp3.1\AkciqApp.Models.pdb
+G:\FilesForGithub\amazion_clone_back_end\AkciqApp.Models\bin\Debug\netcoreapp3.1\AkciqApp.Common.dll
+G:\FilesForGithub\amazion_clone_back_end\AkciqApp.Models\bin\Debug\netcoreapp3.1\AkciqApp.Common.pdb
+G:\FilesForGithub\amazion_clone_back_end\AkciqApp.Models\obj\Debug\netcoreapp3.1\AkciqApp.Models.csprojAssemblyReference.cache
+G:\FilesForGithub\amazion_clone_back_end\AkciqApp.Models\obj\Debug\netcoreapp3.1\AkciqApp.Models.AssemblyInfoInputs.cache
+G:\FilesForGithub\amazion_clone_back_end\AkciqApp.Models\obj\Debug\netcoreapp3.1\AkciqApp.Models.AssemblyInfo.cs
+G:\FilesForGithub\amazion_clone_back_end\AkciqApp.Models\obj\Debug\netcoreapp3.1\AkciqApp.Models.csproj.CopyComplete
+G:\FilesForGithub\amazion_clone_back_end\AkciqApp.Models\obj\Debug\netcoreapp3.1\AkciqApp.Models.dll
+G:\FilesForGithub\amazion_clone_back_end\AkciqApp.Models\obj\Debug\netcoreapp3.1\AkciqApp.Models.pdb

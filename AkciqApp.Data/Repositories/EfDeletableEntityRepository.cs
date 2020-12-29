@@ -1,6 +1,7 @@
 ﻿namespace AkciqApp.Data.Repositories
 {
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
     using AkciqApp.Common.Models;
@@ -14,6 +15,8 @@
             : base(context)
         {
         }
+
+        public void UpdateRange(IEnumerable<TEntity> elements) => base.UpdateRange(elements);
 
         public override IQueryable<TEntity> All() => base.All().Where(x => !x.IsDeleted);
 

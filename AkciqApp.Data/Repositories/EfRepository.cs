@@ -1,6 +1,7 @@
 ﻿namespace AkciqApp.Data.Repositories
 {
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
     using AkciqApp.Common.Repositories;
@@ -24,6 +25,11 @@
         public virtual IQueryable<TEntity> AllAsNoTracking() => this.DbSet.AsNoTracking();
 
         public virtual Task AddAsync(TEntity entity) => this.DbSet.AddAsync(entity).AsTask();
+
+        public void UpdateRange(IEnumerable<TEntity> elements)
+        {
+            this.DbSet.UpdateRange(elements);
+        }
 
         public virtual void Update(TEntity entity)
         {

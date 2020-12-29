@@ -22,7 +22,7 @@
 
             foreach (var category in allCategories)
             {
-                if (category.Name == "Phones")
+                if (category.Name == "Samsung")
                 {
                     addProducts.Add(new Product
                     {
@@ -184,7 +184,7 @@ All - day Battery: Fast - charging, long-lasting intelligent power features supe
                 }
 
                 // Wathes.
-                if (category.Name == "Watches")
+                if (category.Name == "Wrist Watches")
                 {
                     addProducts.Add(new Product
                     {
@@ -282,7 +282,7 @@ NOTE: In step 3, be sure the clasp be fasten in the notch on watchband surface, 
 
                 }
 
-                if (category.Name == "PC Components")
+                if (category.Name == "Video cards")
                 {
                     addProducts.Add(new Product
                     {

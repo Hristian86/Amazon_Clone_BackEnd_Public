@@ -22,3 +22,11 @@ C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Common\obj\Debug\netcoreapp3.1\
 C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Common\obj\Debug\netcoreapp3.1\AkciqApp.Common.AssemblyInfo.cs
 C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Common\obj\Debug\netcoreapp3.1\AkciqApp.Common.dll
 C:\Users\Pencho\Desktop\My_Forum_System\AkciqApp.Common\obj\Debug\netcoreapp3.1\AkciqApp.Common.pdb
+G:\FilesForGithub\amazion_clone_back_end\AkciqApp.Common\bin\Debug\netcoreapp3.1\AkciqApp.Common.deps.json
+G:\FilesForGithub\amazion_clone_back_end\AkciqApp.Common\bin\Debug\netcoreapp3.1\AkciqApp.Common.dll
+G:\FilesForGithub\amazion_clone_back_end\AkciqApp.Common\bin\Debug\netcoreapp3.1\AkciqApp.Common.pdb
+G:\FilesForGithub\amazion_clone_back_end\AkciqApp.Common\obj\Debug\netcoreapp3.1\AkciqApp.Common.csprojAssemblyReference.cache
+G:\FilesForGithub\amazion_clone_back_end\AkciqApp.Common\obj\Debug\netcoreapp3.1\AkciqApp.Common.AssemblyInfoInputs.cache
+G:\FilesForGithub\amazion_clone_back_end\AkciqApp.Common\obj\Debug\netcoreapp3.1\AkciqApp.Common.AssemblyInfo.cs
+G:\FilesForGithub\amazion_clone_back_end\AkciqApp.Common\obj\Debug\netcoreapp3.1\AkciqApp.Common.dll
+G:\FilesForGithub\amazion_clone_back_end\AkciqApp.Common\obj\Debug\netcoreapp3.1\AkciqApp.Common.pdb

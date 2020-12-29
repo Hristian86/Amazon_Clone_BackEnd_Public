@@ -14,7 +14,9 @@ namespace AkciqApp
     using AkciqApp.Mapping;
     using AkciqApp.Models.Models;
     using AkciqApp.Services;
+    using AkciqApp.Services.CartLogic;
     using AkciqApp.Services.EmailService;
+    using AkciqApp.Services.UserManageOrders;
     using AkciqApp.ViewModels;
     using ForumSys.Data;
     using Microsoft.AspNetCore.Antiforgery;
@@ -38,7 +40,7 @@ namespace AkciqApp
     {
         private readonly IConfiguration configuration;
         readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
-        private string envVariable = "DefaultConnection";
+        private string envVariable = "ProductionConnection";
 
         public Startup(IConfiguration configuration)
         {
@@ -89,7 +91,7 @@ namespace AkciqApp
 
                         builder.WithOrigins("https://tombol-a.web.app")
                         .AllowAnyHeader();
-                    //end of firebase app
+                        //end of firebase app
 
                         builder.WithOrigins("https://web.postman.co")
                         .AllowAnyHeader();
@@ -99,28 +101,34 @@ namespace AkciqApp
                         .AllowAnyHeader()
                         .AllowCredentials();
 
-                //builder.WithOrigins("https://localhost:5001").AllowAnyHeader();
+                        builder.WithOrigins("https://amazion.tk")
+                        .AllowAnyMethod()
+                        .AllowAnyHeader()
+                        .AllowCredentials();
 
-            });
+                        //builder.WithOrigins("https://localhost:5001").AllowAnyHeader();
+
+                    });
             });
 
             services.Configure<ForwardedHeadersOptions>(options =>
             {
-                options.ForwardedHeaders =
-                    ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+                options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+                options.KnownNetworks.Clear();
+                options.KnownProxies.Clear();
             });
 
             services.AddHttpClient();
 
-            services.Configure<IdentityOptions>(options =>
-            {
-                options.Password.RequireDigit = false;
-                options.Password.RequireLowercase = false;
-                options.Password.RequireNonAlphanumeric = false;
-                options.Password.RequireUppercase = false;
-                options.Password.RequiredLength = 3;
-                options.Password.RequiredUniqueChars = 0;
-            });
+            //services.Configure<IdentityOptions>(options =>
+            //{
+            //    options.Password.RequireDigit = false;
+            //    options.Password.RequireLowercase = false;
+            //    options.Password.RequireNonAlphanumeric = false;
+            //    options.Password.RequireUppercase = false;
+            //    options.Password.RequiredLength = 3;
+            //    options.Password.RequiredUniqueChars = 0;
+            //});
 
             //// sessions
             //services.AddDistributedMemoryCache();
@@ -157,17 +165,16 @@ namespace AkciqApp
                 };
             });
 
-            //services.AddControllersWithViews();
+            services.AddControllersWithViews();
             services.AddSingleton(this.configuration);
             services.AddRazorPages();
 
-            // Data repositories
+            // Data repositories.
             services.AddScoped(typeof(IDeletableEntityRepository<>), typeof(EfDeletableEntityRepository<>));
             services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
             services.AddScoped<IDbQueryRunner, DbQueryRunner>();
 
-
-            // Services
+            // Services.
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
             services.AddScoped<IEmailService>(x => new EmailService());
             services.AddTransient<ICategoryService, CategoryService>();
@@ -175,6 +182,9 @@ namespace AkciqApp
             services.AddTransient<IVoteService, VoteService>();
             services.AddTransient<ICommentService, CommentService>();
             services.AddTransient<IUserService, UserService>();
+            services.AddTransient<ISearchService, SearchService>();
+            services.AddTransient<ICartService, CartService>();
+            services.AddTransient<IUserOrderService, UserOrderService>();
 
             services.Configure<CookiePolicyOptions>(
             options =>
@@ -184,14 +194,13 @@ namespace AkciqApp
             });
 
 
-            // Anti forgery token header.
-            services.AddAntiforgery(options =>
-            {
-                options.Cookie.SameSite = SameSiteMode.None;
-                options.HeaderName = "X-XSRF-TOKEN";
-                options.Cookie.Name = "XSRF-TOKEN";
-                //options.SuppressXFrameOptionsHeader = false;
-            });
+            //// Anti forgery token header.
+            //services.AddAntiforgery(options =>
+            //{
+            //    options.Cookie.SameSite = SameSiteMode.None;
+            //    options.HeaderName = "X-XSRF-TOKEN";
+            //    options.SuppressXFrameOptionsHeader = false;
+            //});
 
             //// Autovalideta token
             //services.AddControllersWithViews(options =>
@@ -212,6 +221,12 @@ namespace AkciqApp
         {
             AutoMapperConfig.RegisterMappings(typeof(ErrorViewModel).GetTypeInfo().Assembly);
 
+            if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("DYNO")))
+            {
+                Console.WriteLine("Use https redirection");
+                app.UseHttpsRedirection();
+            }
+
             if (env.IsDevelopment())
             {
                 this.envVariable = "DevConnection";
@@ -222,7 +237,6 @@ namespace AkciqApp
             {
                 this.envVariable = "DefaultConnection";
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
@@ -238,8 +252,10 @@ namespace AkciqApp
 
             app.UseCors(MyAllowSpecificOrigins);
 
+            var forwardingOptions = new ForwardedHeadersOptions() { ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto | ForwardedHeaders.All };
+
             // app.UseHttpsRedirection();
-            app.UseForwardedHeaders();
+            app.UseForwardedHeaders(new ForwardedHeadersOptions() { ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto });
 
             app.UseStaticFiles();
 
@@ -250,40 +266,33 @@ namespace AkciqApp
 
             //app.UseSession();
 
-            ///* Configure the app to provide a token in a cookie called XSRF-TOKEN */
-            ///* Custom Middleware Component is required to Set the cookie which is named CSRF-TOKEN 
-            // * The Value for this cookie is obtained from IAntiForgery service
-            // * We must configure this cookie with HttpOnly option set to false so that browser will allow JS to read this cookie
-            // */
-            //app.Use(nextDelegate => context =>
-            //{
-            //    string path = context.Request.Path.Value.ToLower();
-            //    string[] directUrls = { "/admin", "/store", "/cart", "checkout", "/login" };
-            //    if (path.StartsWith("/swagger") || path.StartsWith("/api") || string.Equals("/", path) || directUrls.Any(url => path.StartsWith(url)))
-            //    {
-            //        AntiforgeryTokenSet tokens = antiforgery.GetAndStoreTokens(context);
-            //        context.Response.Cookies.Append("CSRF-TOKEN", tokens.RequestToken, new CookieOptions()
-            //        {
-            //            HttpOnly = false,
-            //            Secure = false,
-            //            IsEssential = true,
-            //            SameSite = SameSiteMode.Strict,
-            //        });
-            //    }
+            /* Configure the app to provide a token in a cookie called XSRF-TOKEN */
+            /* Custom Middleware Component is required to Set the cookie which is named CSRF-TOKEN 
+             * The Value for this cookie is obtained from IAntiForgery service
+             * We must configure this cookie with HttpOnly option set to false so that browser will allow JS to read this cookie
+             */
+            app.Use(nextDelegate => context =>
+            {
+                string path = context.Request.Path.Value.ToLower();
+                string[] directUrls = { "/admin", "/store", "/cart", "checkout", "/login" };
+                if (path.StartsWith("/swagger") || path.StartsWith("/api") || string.Equals("/", path) || directUrls.Any(url => path.StartsWith(url)))
+                {
+                    AntiforgeryTokenSet tokens = antiforgery.GetAndStoreTokens(context);
+                    context.Response.Cookies.Append("XSRF-TOKEN", tokens.RequestToken, new CookieOptions()
+                    {
+                        HttpOnly = false,
+                        Secure = false,
+                        IsEssential = true,
+                        SameSite = SameSiteMode.Strict,
+                    });
+                }
 
-            //    return nextDelegate(context);
-            //});
+                return nextDelegate(context);
+            });
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute("forumCategory", "f/{name:minlength(3)}", new { controller = "Categories", action = "ByName" });
-
-                endpoints.MapControllerRoute("areaRoute", "{area:exists}/{controller=Home}/{action=Index}/{id?}");
-
                 endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
-
-                endpoints.MapControllerRoute("Error", "{*url}", new { controller = "Home", action = "HandleError" });
-
                 endpoints.MapRazorPages();
             });
         }

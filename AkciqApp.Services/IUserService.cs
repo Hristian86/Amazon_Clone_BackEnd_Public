@@ -7,6 +7,10 @@
 
     public interface IUserService
     {
+        public Task<bool> SaveIpAddress(string ip);
+
+        bool UserNameExists(string userName);
+
         Task<bool> IpAddress(string ip, string email);
 
         Task<bool> ChangeUserName(string email, string userName);

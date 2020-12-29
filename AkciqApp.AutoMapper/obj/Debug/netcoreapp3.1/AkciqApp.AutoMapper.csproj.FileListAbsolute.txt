@@ -1,8 +1,0 @@
-C:\Users\Pencho\Desktop\Web_Appi_ForumBased\AkciqApp.AutoMapper\bin\Debug\netcoreapp3.1\AkciqApp.AutoMapper.deps.json
-C:\Users\Pencho\Desktop\Web_Appi_ForumBased\AkciqApp.AutoMapper\bin\Debug\netcoreapp3.1\AkciqApp.AutoMapper.dll
-C:\Users\Pencho\Desktop\Web_Appi_ForumBased\AkciqApp.AutoMapper\obj\Debug\netcoreapp3.1\AkciqApp.AutoMapper.csprojAssemblyReference.cache
-C:\Users\Pencho\Desktop\Web_Appi_ForumBased\AkciqApp.AutoMapper\obj\Debug\netcoreapp3.1\AkciqApp.AutoMapper.AssemblyInfoInputs.cache
-C:\Users\Pencho\Desktop\Web_Appi_ForumBased\AkciqApp.AutoMapper\obj\Debug\netcoreapp3.1\AkciqApp.AutoMapper.AssemblyInfo.cs
-C:\Users\Pencho\Desktop\Web_Appi_ForumBased\AkciqApp.AutoMapper\bin\Debug\netcoreapp3.1\AkciqApp.AutoMapper.pdb
-C:\Users\Pencho\Desktop\Web_Appi_ForumBased\AkciqApp.AutoMapper\obj\Debug\netcoreapp3.1\AkciqApp.AutoMapper.dll
-C:\Users\Pencho\Desktop\Web_Appi_ForumBased\AkciqApp.AutoMapper\obj\Debug\netcoreapp3.1\AkciqApp.AutoMapper.pdb

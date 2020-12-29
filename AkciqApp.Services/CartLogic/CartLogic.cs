@@ -20,15 +20,19 @@
         /// <param name="cartModel">Check.</param>
         /// <param name="productRepository">Product.</param>
         /// <param name="productList">Fils the list.</param>
-        protected void CheckTheProducts(
+        protected bool CheckTheProducts(
             CatrViewModel cartModel,
             IDeletableEntityRepository<Product> productRepository,
             List<Product> productList,
-            int quantity = 2)
+            int quantity)
         {
+            // Set this bool to stop from creating order in the database.
+            bool checkPass = true;
             var productIds = cartModel.CartProductIds;
             if (productIds.Count <= 0)
             {
+                checkPass = false;
+
                 throw new ArgumentException("No items are provided");
             }
 
@@ -42,11 +46,13 @@
                 {
                     if (productsToCheck.Quantity - quantity < 0)
                     {
+                        checkPass = false;
                         throw new ArgumentOutOfRangeException($"{productsToCheck.Title} only {productsToCheck.Quantity} in stock.");
                     }
 
                     if (productsToCheck.Quantity <= 0)
                     {
+                        checkPass = false;
                         throw new ArgumentException($"{productsToCheck.Title} is out of stock.");
                     }
 
@@ -54,18 +60,23 @@
                 }
                 else
                 {
+                    checkPass = false;
                     throw new ArgumentNullException("Invalid product");
                 }
             }
+
+            return checkPass;
         }
 
-        protected async Task<Order> CreateOrder(ApplicationUser user, IDeletableEntityRepository<Order> orderRepository)
+        protected async Task<Order> CreateOrder(ApplicationUser user, IDeletableEntityRepository<Order> orderRepository, string ip)
         {
             // Create an order.
             var newOrder = new Order();
             newOrder.User = user;
             newOrder.UserId = user.Id;
             newOrder.Description = "Purchase";
+            newOrder.IpAddress = ip;
+            newOrder.ConfirmedPurchase = false;
 
             // Save the order to get the id of it.
             await orderRepository.AddAsync(newOrder);
@@ -74,7 +85,7 @@
             return newOrder;
         }
 
-        protected async Task<decimal> OrderMethod(Product product, ApplicationUser user, Order newOrder, List<Product> productToBeModified, int quantity = 2)
+        protected async Task<decimal> OrderMethod(Product product, ApplicationUser user, Order newOrder, List<Product> productToBeModified, int quantity)
         {
             var price = 0M;
             if (product != null)

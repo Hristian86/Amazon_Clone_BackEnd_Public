@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
-
-namespace AkciqApp.Models.PreBuildModels
+﻿namespace AkciqApp.Models.PreBuildModels
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.Text;
+
     public class PreModel
     {
         [Key]
@@ -12,6 +12,7 @@ namespace AkciqApp.Models.PreBuildModels
 
         [MaxLength(100)]
         public string IpAddress { get; set; }
+
         public DateTime CreatedOn { get; set; } = DateTime.UtcNow;
     }
 }

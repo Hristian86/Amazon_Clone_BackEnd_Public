@@ -36,10 +36,27 @@
                 // Logic.
                 var usere = this.User.Identity.Name;
 
+                string ip = string.Empty;
+
+                // Heroku ip address.
+                string ipAdr = this.Request.Headers["x-forwarded-for"];
+
+                if (ipAdr != null)
+                {
+                    var ips = ipAdr.Split(",");
+                    ip = ips[ips.Length - 1];
+                }
+                else
+                {
+                    ip = this.HttpContext.Connection.RemoteIpAddress.MapToIPv4().ToString();
+
+                    ip = "212.25.57.243";
+                }
+
                 var currUser = await this.userManager.FindByEmailAsync(usere);
 
                 // Build the cart serice.
-                var result = await this.cartService.PurchaseMethod(currUser, cartModel);
+                var result = await this.cartService.PurchaseMethod(currUser, cartModel, ip);
 
                 return this.Ok(result);
             }

@@ -22,6 +22,8 @@
         {
         }
 
+        public DbSet<CategoryPerant> CategoryPerants { get; set; }
+
         public DbSet<Setting> Settings { get; set; }
 
         public DbSet<Product> Products { get; set; }
