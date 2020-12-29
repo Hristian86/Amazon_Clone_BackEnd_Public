@@ -44,16 +44,16 @@
 
                 if (productsToCheck != null)
                 {
-                    if (productsToCheck.Quantity - quantity < 0)
-                    {
-                        checkPass = false;
-                        throw new ArgumentOutOfRangeException($"{productsToCheck.Title} only {productsToCheck.Quantity} in stock.");
-                    }
-
                     if (productsToCheck.Quantity <= 0)
                     {
                         checkPass = false;
                         throw new ArgumentException($"{productsToCheck.Title} is out of stock.");
+                    }
+
+                    if (productsToCheck.Quantity - quantity < 0)
+                    {
+                        checkPass = false;
+                        throw new ArgumentOutOfRangeException($"{productsToCheck.Title} only {productsToCheck.Quantity} in stock.");
                     }
 
                     productList.Add(productsToCheck);
